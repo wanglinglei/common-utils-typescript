@@ -1,0 +1,42 @@
+{
+  "name": "common-utils-typescript",
+  "version": "0.0.1-dev",
+  "description": "基于typescript的公共工具函数库",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "vitest --ui",
+    "doc": "ts-node build/index.ts"
+  },
+  "files": [
+    "dist/*",
+    "packages/*"
+  ],
+  "keywords": [
+    "typescript",
+    "javascript",
+    "utils",
+    "browser"
+  ],
+  "exports": {
+    ".": {
+      "import": "./packages/index.ts",
+      "types": "./packages/index.d.ts"
+    },
+    "./packages/*": {
+      "import": "./packages/*/index.ts",
+      "types": "./packages/*/index.d.ts"
+    }
+  },
+  "author": "wanglinglei",
+  "license": "MIT",
+  "devDependencies": {
+    "@vitest/ui": "^2.0.4",
+    "ts-morph": "^23.0.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.4"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.12"
+  }
+}
