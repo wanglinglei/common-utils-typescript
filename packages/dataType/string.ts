@@ -1,8 +1,9 @@
 /*
  * @Author: wanglinglei
  * @Description:字符串相关方法
- * @Date: 2024-07-26 11:39:47
- * @LastEditTime: 2024-07-26 11:43:30
+ * @Date: 2024-07-27 12:37:02
+ * @LastEditTime: 2024-07-27 12:39:03
+ * @FilePath: /common-utils-typescript/packages/dataType/string.ts
  */
 
 /**
