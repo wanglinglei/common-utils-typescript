@@ -37,7 +37,6 @@ class Generate {
 
   constructor() {
     this.paths = getAllFilePath(packagesDir, this.ignorePaths);
-    console.log("paths: ", this.paths);
     this.project.addSourceFilesAtPaths(this.paths);
     this.sourceFiles = this.project.getSourceFiles();
     this.getFileMethods();
