@@ -54,6 +54,9 @@
   "lint-staged": {
     "packages/*.ts": [
       "eslint --fix"
+    ],
+    "README.md": [
+      "doctoc README.md"
     ]
   },
   "commitlint": {

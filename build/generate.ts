@@ -125,8 +125,9 @@ class Generate {
       const contentString = ` \n | 函数名 | 函数描述|入参|默认值|返回值| \n |:----:|:----|:----|:----:|:----:|`;
       string = string + fileString + contentString;
       functionInfoList.forEach((functionItem) => {
-        string += `\n|${functionItem.functionName}|${functionItem.functionDesc}|${functionItem.paramsType}|${functionItem.paramsDefault}|${functionItem.returnType}|\n`;
+        string += `\n|${functionItem.functionName}|${functionItem.functionDesc}|${functionItem.paramsType}|${functionItem.paramsDefault}|${functionItem.returnType}|`;
       });
+      string += "\n";
     });
     string += "\n";
     return string;

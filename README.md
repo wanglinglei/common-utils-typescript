@@ -36,7 +36,6 @@
  | 函数名 | 函数描述|入参|默认值|返回值| 
  |:----:|:----|:----|:----:|:----:|
 |getDataType| 获取数据类型|data: any|null|TDataType|
-
 |isEmptyData| 判断数据是否为空|data: any|--|boolean|
 
 #### 	字符串相关方法
@@ -48,15 +47,10 @@
  | 函数名 | 函数描述|入参|默认值|返回值| 
  |:----:|:----|:----|:----:|:----:|
 |capitalize| 字符串首字母转大写|str: string|--|string|
-
 |reverseString| 字符串翻转|str: string|--|string|
-
 |randomString| 随机字符串||--|string|
-
 |sliceStringAndEllipsis| 字符串指定位置裁剪拼接省略号|str: string, length: number|--|--|
-
 |stringFilterHtml| 去除字符串中的HTML标签|str: string|--|--|
-
 |trimString| 去处字符串空格|str: string, type: 1 / 2 / 3 / 4|--|string|
 
 #### 	日期相关方法
