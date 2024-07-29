@@ -6,7 +6,10 @@
   "type": "module",
   "scripts": {
     "test": "vitest --ui",
-    "doc": "ts-node build/index.ts"
+    "doc": "ts-node build/index.ts",
+    "prepare": "husky install",
+    "lint": "npx eslint",
+    "doctoc": "doctoc README.md"
   },
   "files": [
     "dist/*",
@@ -31,12 +34,34 @@
   "author": "wanglinglei",
   "license": "MIT",
   "devDependencies": {
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0",
+    "@eslint/js": "^9.8.0",
     "@vitest/ui": "^2.0.4",
+    "husky": "^8.0.1",
     "ts-morph": "^23.0.0",
     "typescript": "^5.5.4",
     "vitest": "^2.0.4"
   },
   "dependencies": {
     "dayjs": "^1.11.12"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "packages/*.ts": [
+      "eslint --fix"
+    ],
+    "README.md": [
+      "doctoc README.md"
+    ]
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   }
 }

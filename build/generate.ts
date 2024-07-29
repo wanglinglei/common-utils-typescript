@@ -37,7 +37,6 @@ class Generate {
 
   constructor() {
     this.paths = getAllFilePath(packagesDir, this.ignorePaths);
-    console.log("paths: ", this.paths);
     this.project.addSourceFilesAtPaths(this.paths);
     this.sourceFiles = this.project.getSourceFiles();
     this.getFileMethods();
@@ -119,15 +118,16 @@ class Generate {
         fileInfo || {};
       const fileString =
         `${description ? `\n#### 	${description}` : ""}` +
-        `${filePath ? `\n#### file:${filePath}` : ""}` +
-        `${author ? `\n#### author:${author}` : ""}` +
-        `${date ? `\n#### createTime: ${date}` : ""}` +
-        `${lastEditTime ? `\n#### lastUpdateTime:${lastEditTime}` : ""}`;
+        `${filePath ? `\n- file:${filePath}` : ""}` +
+        `${author ? `\n- author:${author}` : ""}` +
+        `${date ? `\n- createTime: ${date}` : ""}` +
+        `${lastEditTime ? `\n- lastUpdateTime:${lastEditTime}` : ""}\n`;
       const contentString = ` \n | 函数名 | 函数描述|入参|默认值|返回值| \n |:----:|:----|:----|:----:|:----:|`;
       string = string + fileString + contentString;
       functionInfoList.forEach((functionItem) => {
         string += `\n|${functionItem.functionName}|${functionItem.functionDesc}|${functionItem.paramsType}|${functionItem.paramsDefault}|${functionItem.returnType}|`;
       });
+      string += "\n";
     });
     string += "\n";
     return string;
