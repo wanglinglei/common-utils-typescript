@@ -21,11 +21,14 @@
 - file:/packages/browser/index.ts
 - author:wanglinglei
 - createTime: 2024-07-27
-- lastUpdateTime:2024-07-27
+- lastUpdateTime:2024-07-30
  
  | 函数名 | 函数描述|入参|默认值|返回值| 
  |:----:|:----|:----|:----:|:----:|
-|getUrlParams| 获取url参数|url: string|--|Record<string, string>|
+|getUrlParams| 获取url参数|url: string|--|Record<string,string>|
+|launchFullScreen| 开启全屏|element: HTMLElement|--|--|
+|exitFullScreen| 退出全屏||--|--|
+|getExplorer| 获取当前浏览器类型||--|/"IE"/"Firefox"/"Chrome"/"Opera"/"Safari"/"unknown"|
 
 #### 	数据类型相关
 - file:/packages/dataType/index.ts
