@@ -9,6 +9,7 @@
     - [数据类型相关](#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9B%B8%E5%85%B3)
     - [字符串相关方法](#%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95)
     - [日期相关方法](#%E6%97%A5%E6%9C%9F%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95)
+    - [数字类型相关方法](#%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B%E7%9B%B8%E5%85%B3%E6%96%B9%E6%B3%95)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -21,7 +22,7 @@
 - file:/packages/browser/index.ts
 - author:wanglinglei
 - createTime: 2024-07-27
-- lastUpdateTime:2024-07-30
+- lastUpdateTime:2024-08-04
  
  | 函数名 | 函数描述|入参|默认值|返回值| 
  |:----:|:----|:----|:----:|:----:|
@@ -29,6 +30,7 @@
 |launchFullScreen| 开启全屏|element: HTMLElement|--|--|
 |exitFullScreen| 退出全屏||--|--|
 |getExplorer| 获取当前浏览器类型||--|/"IE"/"Firefox"/"Chrome"/"Opera"/"Safari"/"unknown"|
+|jsSleep| js 等待函数|time: number|--|--|
 
 #### 	数据类型相关
 - file:/packages/dataType/index.ts
@@ -65,4 +67,16 @@
  | 函数名 | 函数描述|入参|默认值|返回值| 
  |:----:|:----|:----|:----:|:----:|
 |getWeekDay| 根据给定的日期确定星期几|time: string / number| 当前日期|string|
+
+#### 	数字类型相关方法
+- file:/packages/number/index.ts
+- author:wanglinglei
+- createTime: 2024-08-04
+- lastUpdateTime:2024-08-04
+ 
+ | 函数名 | 函数描述|入参|默认值|返回值| 
+ |:----:|:----|:----|:----:|:----:|
+|randomNumber| 生成范围内随机数|min: number, max: number|--|number|
+|thousandSplit| 数字千分位分隔|int: string / number|--|string|
+|formatMoney| 金额格式化正则|int: string / number|--|string|
 

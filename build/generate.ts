@@ -53,17 +53,12 @@ class Generate {
           .map((p) => `${p.getName()}: ${p.getType().getText()}`)
           .join(", ")
           .replace(/\|/g, "/");
-        console.log(
-          "functionDecl.getReturnTypeNode()?.getText(",
-          functionDecl.getReturnTypeNode()?.getText()
-        );
         const returnTypeText = functionDecl.getReturnTypeNode()
           ? `${functionDecl.getReturnTypeNode()?.getText()}`
           : "--";
         const returnType = returnTypeText
           .replace(/\|/g, "/")
           .replace(/\s/g, "");
-        console.log("paramsDefault", returnType);
         // @ts-ignore
         const paramsDefault =
           // @ts-ignore

@@ -2,7 +2,7 @@
  * @Author: wanglinglei
  * @Description: 浏览器相关
  * @Date: 2024-07-27 16:05:52
- * @LastEditTime: 2024-07-30 21:26:14
+ * @LastEditTime: 2024-08-04 20:11:53
  * @FilePath: /common-utils-typescript/packages/browser/index.ts
  */
 
@@ -91,4 +91,17 @@ export function getExplorer():
   } else {
     return "unknown";
   }
+}
+
+/**
+ * @description: js 等待函数
+ * @param {number} time
+ * @return {*}
+ */
+export function jsSleep(time: number = 1000) {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(true);
+    }, time);
+  });
 }
