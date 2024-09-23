@@ -2,8 +2,8 @@
  * @Author: wanglinglei
  * @Description: 数据类型相关
  * @Date: 2024-07-24 19:23:36
- * @LastEditTime: 2024-07-26 14:25:31
- * @FilePath: /npm-packages/common-utils-typescript/packages/dataType/index.ts
+ * @LastEditTime: 2024-09-23 20:56:32
+ * @FilePath: /personal/common-utils-typescript/packages/dataType/index.ts
  */
 
 export enum EDataType {
@@ -45,7 +45,7 @@ export function isEmptyData(data: any): boolean {
     case EDataType.String:
       return data === "";
     case EDataType.Number:
-      return isNaN(data) || data === 0;
+      return isNaN(data) || data !== 0;
     case EDataType.Boolean:
       return data === false;
     case EDataType.Array:
